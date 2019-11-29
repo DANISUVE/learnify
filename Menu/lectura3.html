@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+<html>
+<head>
+<title>Cultura</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+<style>
+
+.titulo{
+  float:center;
+  font-family: 'McLaren', cursive;
+  color: black;
+  /* margin-left:27%; */
+}
+.button {
+  background: #fcadbb;
+  border-radius: 100px;
+  padding: 15px 60px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.45em;
+  margin: 0 15px;
+}
+
+/* Hover state animation applied here */
+.button:hover {
+  -webkit-animation: hover 1200ms linear 2 alternate;
+  animation: hover 1200ms linear 2 alternate;
+}
+
+/* Active state animation applied here */
+.button:active {
+  -webkit-animation: active 1200ms ease 1 alternate;
+  animation: active 1200ms ease 1 alternate;
+  background: #5F9BE0;
+}
+.gray { background: #D2D2D2; }
+.gray:active { background: #b9b9b9; }
+
+/* Active state animation keyframes below */
+
+@-webkit-keyframes active {
+  0% {transform: scale(1,1);}
+  90% {transform: scale(.9,.88);}
+  100% {transform: scale(.92,.9);}
+}
+
+keyframes active {
+  0% {transform: scale(1,1);}
+  90% {transform: scale(.9,.88);}
+  100% {transform: scale(.92,.9);}
+}
+.ml3 {
+	font-family: Poppins-Regular, sans-serif;
+  font-weight: 900;
+	color: white;
+  font-size: 1.5em;
+}
+.ml6 {
+	font-family: Poppins-Regular, sans-serif;
+	color:white;
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+/* .center{
+	margin: auto;
+  width: 50%;
+  padding: 5px;
+} */
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+body{
+	background-image: url("images/fondoL5.svg");
+	background-position: center center; /* Center the image */
+	background-attachment: fixed;
+background-repeat: no-repeat; /* Do not repeat the image */
+background-size: cover;
+}
+.home				{ position: absolute; top: 0; right: 0; width: 6%; height: 10%;}
+
+</style>
+<div>
+    <li><a href="../index.html" ><img src="../img/home2.png" class="home" alt="home" /></a></li>
+  </div>
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+
+
+</head>
+<body>
+
+
+  <!-- About Section -->
+	<h1 align="center" class="ml6">
+	  <span class="text-wrapper">
+	    <span class="letters">MONET’S GARDEN</span>
+	  </span>
+	</h1>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 99000,
+    easing: "easeOutExpo",
+    delay: 99000
+  });
+
+
+</script>
+
+<h1 class="ml3">Monet’s early paintings were in the realist style, but later he painted in his own impressionist style. He started to focus on light and color, not people or objects.
+One of Monet’s most famous subjects is water lilies. He painted over 250 water lily paintings. Many of them look alike, but no two are exactly the same. He painted them in various colors and types of light.
+Finally, he was able to capture the way the light changed their appearance. In these paintings, the flowers lose significance and the mood becomes an important feature.
+As Monet focused on emotion rather than realism, people soon began to see how light can be beautiful. Thanks to Monet, modern painters have the freedom to paint what they feel, not just what they see.</h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 150,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 99000,
+    easing: "easeOutExpo",
+    delay: 99000
+  });
+</script>
+
+</div>
+<div align="center">
+	<a href="snake.html" class="button">Snake</a>
+</div>
+<script src="js/main.js"></script>
+<!-- Footer -->
+<!-- <footer class="w3-center w3-black w3-padding-16">
+  <p>Hecho por Cúbica</a></p>
+</footer> -->
+
+</body>
+</html>
