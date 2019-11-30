@@ -1,0 +1,37 @@
+//Solve Button
+function solveClicked(){
+	if (currentTextInput != null){
+		var temp1 = currentTextInput;
+		var token = temp1.split("_");
+		var row = token[1];
+		var column = token[2];
+		
+		// Print elements on top
+		for(j = row; j >= 0; j--){
+			if(puzzelArrayData[j][column] != 0){
+				document.getElementById('txt' + '_' + j + '_' + column).value = puzzelArrayData[j][column];
+				}else break;
+		}
+		// Print elements on right
+		for(i = column; i< puzzelArrayData[row].length; i++){
+			if(puzzelArrayData[row][i] != 0){
+				document.getElementById('txt' + '_' + row + '_' + i).value = puzzelArrayData[row][i];
+				}else break;
+		}
+		
+		// Print elements below
+		for(m = row; m< puzzelArrayData.length; m++){
+			if(puzzelArrayData[m][column] != 0){
+				document.getElementById('txt' + '_' + m + '_' + column).value = puzzelArrayData[m][column];
+				}else break;
+		}
+		// Print elements on left
+		for(k = column; k >= 0; k--){
+			if(puzzelArrayData[row][k] != 0){
+				document.getElementById('txt' + '_' + row + '_' + k).value = puzzelArrayData[row][k];
+				}else break;
+		}
+		// Done!
+		
+	}
+}

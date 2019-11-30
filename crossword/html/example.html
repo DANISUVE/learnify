@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cucigrama</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="../main.css">
+	<link rel="icon" type="image/png" href="../../images/icons/crossword.png"/>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="../js/example.js"></script>
+</head>
+<body onload="showCrossword()">
+	<div style="position: absolute; right: -35.5%; top: 0;">
+			<a href="../../index.html" ><img src="../../images/home.png" width="11%" height="11%" /></a>
+		</div>
+	<h1>Crossword Puzzle</h1>
+	<div id="rnd-crossword-box">
+		<table id="crossword">
+			<!--Here is were the crossword is going to be-->
+		</table>
+		</br>
+		<table>
+			<td><input class="rnd-button"  type="submit" value="Reiniciar" onclick="clearCrossword()"></td>
+			<td><input class="rnd-button"  type="submit" value="Calificar" onclick="check()"></td>
+		</table>
+	</div>
+	</br>
+	</br>
+	<table id="rnd-hintsTable">
+		<tr>
+			<td><strong>Horizontal:</strong></td><td><strong>Vertical:</strong></td>
+		</tr>
+		<tr>
+			<td>3. Desaparecido</td><td>1. Verde</td>
+		</tr>
+		<tr>
+			<td>5. Vocal</td><td>2. Hermanos</td>
+		</tr>
+		<tr>
+			<td>6. Enchufe</td><td>4. Cena</td>
+	</table>
+</body>
+</html>

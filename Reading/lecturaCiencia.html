@@ -87,11 +87,11 @@ keyframes active {
   line-height: 1em;
 }
 body{
-	background-image: url("images/FondoL3.svg");
+	background-image: url("../images/fondoL3.svg");
 	background-position: center center; /* Center the image */
 	background-attachment: fixed;
-background-repeat: no-repeat; /* Do not repeat the image */
-background-size: cover;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 .home				{ position: absolute; top: 0; right: 0; width: 6%; height: 10%;}
 
@@ -157,7 +157,7 @@ anime.timeline({loop: true})
     opacity: [0,1],
     easing: "easeInOutQuad",
     duration: 150,
-    delay: (el, i) => 150 * (i+1)
+    delay: (el, i) => 45 * (i+1)
   }).add({
     targets: '.ml3',
     opacity: 0,
@@ -169,9 +169,8 @@ anime.timeline({loop: true})
 
 </div>
 <div align="center">
-	<a href="snake.html" class="button">Snake</a>
+	<a href="../columnas/ColumnasVue/columnasCiencia.html" class="button">Actividad</a>
 </div>
-<script src="js/main.js"></script>
 <!-- Footer -->
 <!-- <footer class="w3-center w3-black w3-padding-16">
   <p>Hecho por Cúbica</a></p>
