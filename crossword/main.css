@@ -206,18 +206,20 @@ a {
     width: 50%;
   }
 }
-/*-------------Reading Button-------------------*/
+/*-------------Reading Buttons-------------------*/
 a{
 	text-decoration: none;
 	color: black;
 }
 
-.button {
+.button-1 {
 	position: absolute;
 	right: 10%;
 	top: 1%;
 	width: 170px;
-	color: #000;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
 	text-transform: uppercase;
 	font-weight: 600;
 	cursor: pointer;
@@ -225,10 +227,44 @@ a{
 	background-color: transparent;
 	border: 3px solid rgb(75, 37, 37);
 	border-radius: 50px;
-	-webkit-transition: all .07s ease-in-out;
-	transition: all .07s ease-in-out;
+	-webkit-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
+	color: rgb(75, 37, 37);
 }
-.button:hover {
+.button-1:hover {
 	box-shadow: 0 0 10px 0 rgb(75, 37, 37) inset, 0 0 20px 2px rgb(75, 37, 37);
-	border: 3px solid  rgb(75, 37, 37);
+	border: 3px solid rgb(75, 37, 37);
+}
+
+.button-2 {
+	position: absolute;
+	left: 3%;
+	top: 1%;
+	width: 85px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	cursor: pointer;
+	display: inline-block;
+	background-color: transparent;
+	border: 3px solid #ff0251;
+	color: #ff0251;
+	transition: .3s;
+}
+.button-2:hover {
+	animation: pulse 1s infinite;
+	transition: .3s;
+}
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	70% {
+		transform: scale(.9);
+	}
+		100% {
+		transform: scale(1);
+	}
 }
