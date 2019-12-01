@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cucigrama</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="../main.css">
+	<link rel="icon" type="image/png" href="../../images/icons/crossword.png"/>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="../js/colors-hard.js"></script>
+</head>
+<body onload="showCrossword()">
+	<div style="position: absolute; right: -35.5%; top: 0;">
+			<a href="../../index.html" ><img src="../../images/home.png" width="11%" height="11%" /></a>
+		</div>
+	<h1>Crossword Puzzle</h1>
+	<div id="cHard-crossword-box">
+		<table id="crossword">
+			<!--Here is were the crossword is going to be-->
+		</table>
+		</br>
+		<table>
+			<td><input class="cHard-button"  type="submit" value="Reiniciar" onclick="clearCrossword()"></td>
+			<td><input class="cHard-button"  type="submit" value="Calificar" onclick="check()"></td>
+		</table>
+	</div>
+	</br>
+	</br>
+	<table id="cHard-hintsTable">
+		<tr>
+			<td><strong>Horizontal:</strong></td><td><strong>Vertical:</strong></td>
+		</tr>
+		<tr>
+			<td>2. Rojo</td><td>1. Naranja</td>
+		</tr>
+		<tr>
+			<td>4. Cafe</td><td>3. Morado</td>
+		</tr>
+		<tr>
+			<td>6. Gris</td><td>5. Verde</td>
+		</tr>
+		<tr>
+			<td>8. Amarillo</td><td>7. Blanco</td>
+		</tr>
+		<tr>
+			<td></td><td>9. Negro</td>
+		</tr>
+	</table>
+</body>
+</html>

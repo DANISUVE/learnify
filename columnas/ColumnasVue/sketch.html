@@ -1,0 +1,129 @@
+<html>
+<link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+<head>
+<title>Dibuja!</title>
+<link rel="icon" type="image/png" href="images/icons/blackboard.png"/>
+<script type="text/javascript">
+    var canvas,ctx;
+    var mouseX,mouseY,mouseDown=0;
+    function drawDot(ctx,x,y,size) {
+      r=0; g=0; b=0; a=255;
+      ctx.fillStyle = "rgba("+r+","+g+","+b+","+(a/255)+")";
+      ctx.beginPath();
+      ctx.arc(x, y, size, 0, Math.PI*2, true);
+      ctx.closePath();
+      ctx.fill();
+    }
+    function clearCanvas(canvas,ctx) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    function sketchpad_mouseDown() {
+        mouseDown=1;
+        drawDot(ctx,mouseX,mouseY,12);
+    }
+    function sketchpad_mouseUp() {
+        mouseDown=0;
+    }
+    function sketchpad_mouseMove(e) {
+        getMousePos(e);
+        if (mouseDown==1) {
+            drawDot(ctx,mouseX,mouseY,12);
+        }
+    }
+
+    function getMousePos(e) {
+        if (!e)
+            var e = event;
+
+        if (e.offsetX) {
+            mouseX = e.offsetX;
+            mouseY = e.offsetY;
+        }
+        else if (e.layerX) {
+            mouseX = e.layerX;
+            mouseY = e.layerY;
+        }
+     }
+
+
+    function init() {
+        canvas = document.getElementById('sketchpad');
+          if (canvas.getContext)
+            ctx = canvas.getContext('2d');
+        if (ctx) {
+            canvas.addEventListener('mousedown', sketchpad_mouseDown, false);
+            canvas.addEventListener('mousemove', sketchpad_mouseMove, false);
+            window.addEventListener('mouseup', sketchpad_mouseUp, false);
+        }
+    }
+</script>
+
+<style>
+#sketchpadapp {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.boton{
+
+  margin-left:89%;
+  position: relative;
+  float: inline-end;
+}
+.buttonposition {
+    margin-right: 15%;
+    position: relative;
+    float: inline-end;
+    width:50px;
+    height:50px;
+}
+img{
+    width:30px;
+    height:30px;
+    position:inherit;
+}
+.rightside {
+    float:right;
+    margin-left:10px;
+}
+
+.titulo{
+  float:center;
+  font-family: 'McLaren', cursive;
+  color: #52a0ff;
+  margin-left:27%;
+}
+body {
+    background-image: url("Fondo22.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    font-size: 1.5rem;
+}
+#sketchpad {
+    margin-left: 22%;
+    margin-top: 3%;
+    position:relative;
+}
+</style>
+</head>
+
+<body onload="init()">
+  <header>
+    <h1 class="titulo">Draw whatever you want !</h1>
+    <div align="right">
+        <li><a href="../../index.html" class="boton"><img src="homeAzul.png" style="position: absolute; right: 0; top: 0;" /></a></li>
+    </div>
+
+  </header>
+    <div id="sketchpadapp">
+        <div class="righside">
+            <canvas id="sketchpad" height="480" width="770">
+            </canvas>
+        </div>
+        <button class="buttonposition" type="submit" onclick="clearCanvas(canvas,ctx);"><img src="UI_Icon.png"></button>
+    </div>
+</body>
+</html>

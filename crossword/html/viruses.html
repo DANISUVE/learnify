@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+.titulo{
+  font-family: Poppins-Regular, sans-serif;
+  color: black;
+  /* margin-left:27%; */
+}
+.titulo2{
+  font-family: Poppins-Regular, sans-serif;
+  font-size: 160%;
+  color: black;
+  /* margin-left:27%; */
+}
+
+.home				{ position: absolute; top: 0; right: 0; width: 6%; height: 10%;}
+
+}
+
+</style>
+<head>
+	<title>Cucigrama</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="../main.css">
+	<link rel="icon" type="image/png" href="../../images/icons/crossword.png"/>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="../js/viruses.js"></script>
+</head>
+<body onload="showCrossword()">
+	<!-- <div style="position: absolute; right: -35.5%; top: 0;">
+			<a href="../../index.html" ><img src="../../images/home.png" width="11%" height="11%" /></a>
+		</div> -->
+		<div>
+				<li><a href="../../index.html" ><img src="../../images/home.png" class="home" alt="home" /></a></li>
+			</div>
+	<h1 class="titulo">Crossword Puzzle</h1>
+
+  <!-- <h1 class="titulo2">Instrucciones</h1> -->
+
+	<div class="button-1">
+		<a style="position: relative; left: 1%; top: 26%;" href="../../Reading/soloLecturaCiencia.html" target="_blank">Good vs. Evil</a>
+	</div>
+
+	<!--<div class="button-2">
+		<a>Help</a>
+	</div>-->
+
+	<div id="virus-crossword-box">
+		<table id="crossword">
+			<!--Here is were the crossword is going to be-->
+		</table>
+		</br>
+		<table>
+			<td><input class="virus-button"  type="submit" value="Reiniciar" onclick="clearCrossword()"></td>
+			<td><input class="virus-button"  type="submit" value="Calificar" onclick="check()"></td>
+		</table>
+	</div>
+	</br>
+	</br>
+	<table id="virus-hintsTable">
+		<tr>
+			<td><strong>Horizontal:</strong></td><td><strong>Vertical:</strong></td>
+		</tr>
+		<tr>
+			<td>2. Stop being visible</td><td>1. Not often; rarely.</td>
+		</tr>
+		<tr>
+			<td>4. Be heavier, greater, or more significant than.</td><td>3. Distribute or disperse (something) over an area.</td></td>
+		</tr>
+		<tr>
+			<td>6. Culminate or result in (a particular event or consequence)</td><td>5. A large or sufficient amount or quantity; more than enough.</td>
+		</tr>
+		<tr>
+			<td>8. An illness that affects people or animals, especially one that is caused by infection</td><td>7. Develop gradually (in PAST)</td>
+		</tr>
+		<tr>
+			<td></td><td>9. From a period of time untill now</td>
+	</table>
+<script>
+
+</script>
+</body>
+</html>

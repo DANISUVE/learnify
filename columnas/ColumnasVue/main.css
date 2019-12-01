@@ -1,0 +1,51 @@
+#container{
+  width: 600px;
+    display: flex;
+    height: 300px;
+}
+.titulo{
+  float:center;
+  font-family: 'McLaren', cursive;
+  color: black;
+  margin-left:32%;
+}
+.boton{
+  margin-left:92%;
+}
+.center {
+    /* muevele a este margin para acomodar todo */
+    margin-left: 33%;
+    margin-top: 14%;
+    width: 30%;
+  }
+
+.column{
+  font-family: 'Fredoka One', cursive;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.column:first-of-type{
+    /* este mueve la columna derecha */
+    margin-right: 10vw;
+    color: cornflowerblue;
+}
+
+.column-element{
+    flex-basis: 20vh;
+    padding-bottom: 5px;
+    width: 10em;
+}
+
+body {
+    background-image: url("Fondo1.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    font-size: 1.5rem;
+}
+
+@import url('https://www.fontify.me/wf/596ab250913525e8c97029f579bca02b');
+body{
+    font-family: font51803;
+}
